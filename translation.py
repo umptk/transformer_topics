@@ -7,12 +7,12 @@ tokenizer = MBart50TokenizerFast.from_pretrained("facebook/mbart-large-50-many-t
 
 
 # FUNCTION FOR TRANSLATING A PICKLED docs LIST TO TARGET LANG.
-def many_to_many(docs: list, target_lang: str):
+def many_to_many(docs: list, target_lang: str, source_lang: str='en_XX'):
 
     target_docs = list()
 
     for doc in docs:
-        tokenizer.src_lang = "en_XX"
+        tokenizer.src_lang = source_lang
         encoded_hi = tokenizer(doc, return_tensors="pt")
         generated_tokens = model.generate(
             **encoded_hi,
