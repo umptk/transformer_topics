@@ -36,6 +36,6 @@ This sample size will decrease to 10 documents for the multilingual portion (sin
 
 ![Alt text](figures/hierarchical_topics_1.png?raw=true "A decent first pass at hierarchical clustering.")
 
-
+BERTopics has easily accessible controls for adjusting the output topics. There are standard topic model parameters such as the number and size of topics as well as a unique parameter, diversity, which limits the number of duplicate words across topics using Maximal Marginal Relevance (MMR). The full documentation is available [here](https://github.com/umptk/transformer_topics).
 
 
